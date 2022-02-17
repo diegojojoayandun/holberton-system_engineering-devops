@@ -4,6 +4,6 @@
 i=10
 until [ $i -eq 0 ]
 do
-    echo "Holberton School"
+    echo "Best School"
     (( i-- ))
 done
