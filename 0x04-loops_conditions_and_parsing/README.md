@@ -1,3 +1,3 @@
 # 0x04. Loops, conditions and parsing
 
-[![Alternate Text]({https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/6/b07e3333b1edfb9beed5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20220217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220217T124415Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7a0c49cefd49fbcf52fc610d4cd0c7a32caf63b5c9e8e358c1d5fffeaa981d56})]({https://www.youtube.com/watch?v=BC2neyc5GcI&feature=youtu.be} "Link Title")
+[![Alternate Text]("{"https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/6/b07e3333b1edfb9beed5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20220217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220217T124415Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7a0c49cefd49fbcf52fc610d4cd0c7a32caf63b5c9e8e358c1d5fffeaa981d56"})]({"https://www.youtube.com/watch?v=BC2neyc5GcI&feature=youtu.be"} "Link Title")
