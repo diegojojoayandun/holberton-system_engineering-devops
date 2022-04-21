@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# write a Bash script that configures a new Ubuntu machine nginx
+
+apt-get -y update
+apt-get -y install nginx
+ufw allow  'Nginx HTTP' #on port 80
+echo 'Hello World' > /var/www/html/index.nginx-debian.html
+sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+service nginx restart
