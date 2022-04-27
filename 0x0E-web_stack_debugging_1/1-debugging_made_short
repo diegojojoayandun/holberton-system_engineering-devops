@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# script to link sites-enabled to sites-available and start nginx without running status
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx start
-rm /run/nginx.pid
+# Command to make an nginx server listen on port 80, shorter version
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
+pkill -1 nginx
