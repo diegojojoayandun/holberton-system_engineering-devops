@@ -1,6 +1,6 @@
 # manifest to automate the task of creating a custom HTTP header response
 exec { 'apt-get-update':
-  command => '/usr/bin/apt-get update',
+  command => '/usr/bin/apt-get -y update',
 }
 
 package { 'nginx':
@@ -8,7 +8,7 @@ package { 'nginx':
   require => Exec['apt-get-update'],
 }
 
-file_line { 'x':
+file_line { 'a':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
@@ -16,7 +16,7 @@ file_line { 'x':
   require => Package['nginx'],
 }
 
-file_line { 'y':
+file_line { 'b':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
