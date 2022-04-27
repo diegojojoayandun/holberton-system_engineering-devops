@@ -8,6 +8,12 @@ package { 'nginx':
   require => Exec['apt-get-update'],
 }
 
+firewall { 'Nginx HTTP':
+  port   => [80],
+  proto  => tcp,
+  action => accept,
+}
+
 file_line { 'a':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
