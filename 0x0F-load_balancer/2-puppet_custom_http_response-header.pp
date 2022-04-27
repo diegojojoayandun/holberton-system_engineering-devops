@@ -4,14 +4,7 @@ exec { 'apt-get-update':
 }
 
 package { 'nginx':
-  ensure  => installed,
-  require => Exec['apt-get-update'],
-}
-
-ufw_rule { 'Allow HTTP':
-  action       => 'allow',
-  to_ports_app => 80,
-  proto        => 'tcp',
+  ensure  => present,
 }
 
 file_line { 'a':
