@@ -8,7 +8,7 @@ package { 'nginx':
   require => Exec['apt-get-update'],
 }
 
-ufw_rule { 'Nginx HTTP':
+ufw_rule { 'Allow HTTP':
   action       => 'allow',
   to_ports_app => 80,
   proto        => 'tcp',
