@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Command to make an nginx server listen on port 80, shorter version
-
-sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
-sudo service nginx restart
+# script to link sites-enabled to sites-available and start nginx without running status
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
+rm /run/nginx.pid
