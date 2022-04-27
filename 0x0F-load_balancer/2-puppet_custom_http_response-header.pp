@@ -8,10 +8,10 @@ package { 'nginx':
   require => Exec['apt-get-update'],
 }
 
-firewall { 'Nginx HTTP':
-  port   => [80],
-  proto  => tcp,
-  action => accept,
+ufw_rule { 'Nginx HTTP':
+  action       => 'allow',
+  to_ports_app => 80,
+  proto        => 'tcp',
 }
 
 file_line { 'a':
