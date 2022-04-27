@@ -4,7 +4,8 @@ exec { 'apt-get-update':
 }
 
 package { 'nginx':
-  ensure  => present,
+  ensure  => installed,
+  require => Exec['apt-get-update'],
 }
 
 file_line { 'a':
