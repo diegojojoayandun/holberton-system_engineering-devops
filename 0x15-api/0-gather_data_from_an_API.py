@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""
-Uses https://jsonplaceholder.typicode.com along with an employee ID to
-return information about the employee's todo list progress
-"""
+""" Return information about the employee's todo list progress """
 
 import requests
 from sys import argv
 
 if __name__ == '__main__':
-    userId = argv[1]
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
-                        format(userId), verify=False).json()
-    todo = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
-                        format(userId), verify=False).json()
+
+    url = "https://jsonplaceholder.typicode.com"
+
+    user = requests.get(url + "/users/{}".
+                        format(argv[1]), verify=False).json()
+    todo = requests.get(url + "/todos?userId={}".
+                        format(argv[1]), verify=False).json()
     completed_tasks = []
     for task in todo:
         if task.get('completed') is True:
