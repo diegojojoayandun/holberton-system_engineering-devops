@@ -13,7 +13,7 @@ def top_ten(subreddit):
 
     import requests
 
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
     headers = {"User-Agent": "My-User-Agent"}
     options = {'allow_redirects': False}
 
