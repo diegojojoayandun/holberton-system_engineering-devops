@@ -1,2 +1,3 @@
 #!/usr/bin/env bashS
+# restart gunicorn service
 pkill -HUP gunicorn
